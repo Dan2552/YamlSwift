@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		8E1D76271B258FEE0022C013 /* Yaml.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E1D76261B258FEE0022C013 /* Yaml.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E1D762D1B258FEE0022C013 /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1D76211B258FEE0022C013 /* Yaml.framework */; };
+		ABCA7A221C4ECE01004AAE8C /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA7A211C4ECE01004AAE8C /* Serializer.swift */; };
+		ABCA7A231C4ECE01004AAE8C /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA7A211C4ECE01004AAE8C /* Serializer.swift */; };
+		ABCA7A251C4ED213004AAE8C /* SerializeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA7A241C4ED213004AAE8C /* SerializeTests.swift */; };
+		ABCA7A261C4ED213004AAE8C /* SerializeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA7A241C4ED213004AAE8C /* SerializeTests.swift */; };
 		F32DF2411B7304620011046A /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32DF23B1B7304620011046A /* Operators.swift */; };
 		F32DF2431B7304620011046A /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32DF23C1B7304620011046A /* Parser.swift */; };
 		F32DF2451B7304620011046A /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32DF23D1B7304620011046A /* Regex.swift */; };
@@ -53,6 +57,8 @@
 		8E1D762C1B258FEE0022C013 /* YamlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YamlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1D76321B258FEE0022C013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1D763B1B2591330022C013 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		ABCA7A211C4ECE01004AAE8C /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
+		ABCA7A241C4ED213004AAE8C /* SerializeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializeTests.swift; sourceTree = "<group>"; };
 		F32DF23B1B7304620011046A /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		F32DF23C1B7304620011046A /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F32DF23D1B7304620011046A /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 				F32DF23D1B7304620011046A /* Regex.swift */,
 				F32DF23E1B7304620011046A /* Result.swift */,
 				F32DF23F1B7304620011046A /* Tokenizer.swift */,
+				ABCA7A211C4ECE01004AAE8C /* Serializer.swift */,
 				F32DF2401B7304620011046A /* Yaml.swift */,
 				8E1D76241B258FEE0022C013 /* Supporting Files */,
 			);
@@ -138,6 +145,7 @@
 			children = (
 				F32DF24D1B7304750011046A /* ExampleTests.swift */,
 				F3894BCB1B7312E000286880 /* YamlTests.swift */,
+				ABCA7A241C4ED213004AAE8C /* SerializeTests.swift */,
 				8E1D76311B258FEE0022C013 /* Supporting Files */,
 			);
 			path = YamlTests;
@@ -334,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCA7A221C4ECE01004AAE8C /* Serializer.swift in Sources */,
 				F32DF2431B7304620011046A /* Parser.swift in Sources */,
 				F32DF2491B7304620011046A /* Tokenizer.swift in Sources */,
 				F32DF24B1B7304620011046A /* Yaml.swift in Sources */,
@@ -347,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCA7A251C4ED213004AAE8C /* SerializeTests.swift in Sources */,
 				F3894BCC1B7312E000286880 /* YamlTests.swift in Sources */,
 				F32DF2501B7304750011046A /* ExampleTests.swift in Sources */,
 			);
@@ -356,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCA7A231C4ECE01004AAE8C /* Serializer.swift in Sources */,
 				F32DF2701B7305630011046A /* Parser.swift in Sources */,
 				F32DF2731B7305630011046A /* Tokenizer.swift in Sources */,
 				F32DF2741B7305630011046A /* Yaml.swift in Sources */,
@@ -369,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCA7A261C4ED213004AAE8C /* SerializeTests.swift in Sources */,
 				F3894BCD1B7312E000286880 /* YamlTests.swift in Sources */,
 				F32DF27B1B7305700011046A /* ExampleTests.swift in Sources */,
 			);

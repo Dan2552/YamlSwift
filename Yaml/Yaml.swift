@@ -126,6 +126,11 @@ extension Yaml {
     }
     return result
   }
+
+    //TODO fix spacing
+    public static func serialize (yaml: Yaml) -> Swift.String {
+        return serializeYaml(yaml)
+    }
 }
 
 extension Yaml {
