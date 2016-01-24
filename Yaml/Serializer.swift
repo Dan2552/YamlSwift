@@ -1,5 +1,11 @@
 import Foundation
 
+// Missing:
+// - Flow seq
+// - Flow map
+// - Directives
+// - Aliases
+
 // TODO spacing!
 func serializeYaml (yaml: Yaml) -> String {
     switch yaml {
@@ -15,25 +21,36 @@ func serializeYaml (yaml: Yaml) -> String {
         return "\(yaml.double!)"
     case .Array:
         return serializeArray(yaml.array!)
+    case .Dictionary:
+        return serializeDictionary(yaml.dictionary!)
     default:
         return ""
     }
 }
 
 func serializeArray(array: [Yaml]) -> String {
-    let strings: [String] = array.map({ yaml -> String in
-        let s: String = serializeYaml(yaml)
-        return s
-    })
-    
-    var result = "["
-    for (index, string) in strings.enumerate() {
-        if index < strings.count - 1 {
-            result += "\(string), "
+    var result = ""
+    for (index, element) in array.enumerate() {
+        let line = "- \(serializeYaml(element))"
+        if index < array.count - 1 {
+            result += "\(line)\n"
         } else {
-            result += string
+            result += line
         }
     }
-    result += "]"
+    return result
+}
+
+func serializeDictionary(dictionary: [Yaml: Yaml]) -> String {
+    var result = ""
+    for (index, (key, value)) in dictionary.enumerate() {
+        let line = "\(serializeYaml(key)): \(serializeYaml(value))"
+        
+        if index < dictionary.keys.count - 1 {
+            result += "\(line)\n"
+        } else {
+            result += line
+        }
+    }
     return result
 }

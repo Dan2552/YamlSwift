@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8E1D76271B258FEE0022C013 /* Yaml.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E1D76261B258FEE0022C013 /* Yaml.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E1D762D1B258FEE0022C013 /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1D76211B258FEE0022C013 /* Yaml.framework */; };
+		AB65A1CC1C55073C001EC6D9 /* SerializeExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65A1CB1C55073C001EC6D9 /* SerializeExampleTests.swift */; };
+		AB65A1CD1C55073C001EC6D9 /* SerializeExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65A1CB1C55073C001EC6D9 /* SerializeExampleTests.swift */; };
 		ABCA7A221C4ECE01004AAE8C /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA7A211C4ECE01004AAE8C /* Serializer.swift */; };
 		ABCA7A231C4ECE01004AAE8C /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA7A211C4ECE01004AAE8C /* Serializer.swift */; };
 		ABCA7A251C4ED213004AAE8C /* SerializeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCA7A241C4ED213004AAE8C /* SerializeTests.swift */; };
@@ -57,6 +59,7 @@
 		8E1D762C1B258FEE0022C013 /* YamlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YamlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1D76321B258FEE0022C013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1D763B1B2591330022C013 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		AB65A1CB1C55073C001EC6D9 /* SerializeExampleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializeExampleTests.swift; sourceTree = "<group>"; };
 		ABCA7A211C4ECE01004AAE8C /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
 		ABCA7A241C4ED213004AAE8C /* SerializeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializeTests.swift; sourceTree = "<group>"; };
 		F32DF23B1B7304620011046A /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 				F32DF24D1B7304750011046A /* ExampleTests.swift */,
 				F3894BCB1B7312E000286880 /* YamlTests.swift */,
 				ABCA7A241C4ED213004AAE8C /* SerializeTests.swift */,
+				AB65A1CB1C55073C001EC6D9 /* SerializeExampleTests.swift */,
 				8E1D76311B258FEE0022C013 /* Supporting Files */,
 			);
 			path = YamlTests;
@@ -357,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABCA7A251C4ED213004AAE8C /* SerializeTests.swift in Sources */,
+				AB65A1CC1C55073C001EC6D9 /* SerializeExampleTests.swift in Sources */,
 				F3894BCC1B7312E000286880 /* YamlTests.swift in Sources */,
 				F32DF2501B7304750011046A /* ExampleTests.swift in Sources */,
 			);
@@ -381,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABCA7A261C4ED213004AAE8C /* SerializeTests.swift in Sources */,
+				AB65A1CD1C55073C001EC6D9 /* SerializeExampleTests.swift in Sources */,
 				F3894BCD1B7312E000286880 /* YamlTests.swift in Sources */,
 				F32DF27B1B7305700011046A /* ExampleTests.swift in Sources */,
 			);

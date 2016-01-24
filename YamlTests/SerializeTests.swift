@@ -24,59 +24,30 @@ class SerializeTests: XCTestCase {
     func testString() {
         XCTAssert(Yaml.serialize(.String("Dan2552")) == "Dan2552")
     }
-
-    func testFlowSeq() {
-        XCTAssert(Yaml.serialize(.Array([])) == "[]")
-        print(Yaml.serialize(Yaml.Array([true, false, true])))
-        XCTAssert(Yaml.serialize(.Array([true, false, true])) == "[true, false, true]")
-        //TODO more of these for sure
-    }
     
     func testBlockSeq() {
-// TODO
-//        
-//        let yaml = Yaml.load("- 1\n- 2")
-//        (lldb) po yaml.value!
-//            ▿ Array([Int(1), Int(2)])
-//            ▿ Array : 2 elements
-//        ▿ [0] : Int(1)
-//        - Int : 1
-//        ▿ [1] : Int(2)
-//        - Int : 2
-//        
-//        XCTAssert(Yaml.serialize(???) == "- 1\n- 2")
-    }
-    
-    func testFlowMap() {
-// TODO
-//        let yaml = Yaml.load("{}")
-//        (lldb) po yaml
-//            ▿ Result<Yaml>
-//            ▿ Value : <Box<Yaml>: 0x1002203a0>
-//        (lldb) po yaml.value!
-//            ▿ Dictionary([:])
-//            - Dictionary : 0 elements
-//        
-//        XCTAssert(Yaml.serialize(???) == "{}")
+        let result = Yaml.serialize(Yaml.Array([1, 2]))
+        XCTAssert(result == "- 1\n- 2")
     }
     
     func testBlockMap() {
-        
-    }
-    
-    func testDirectives() {
-        
-    }
-    
-    func testReserves() {
-        
-    }
-    
-    func testAliases() {
-        
+        let result = Yaml.serialize(.Dictionary(["x": 1, "y": 2]))
+        let validResults = [
+            "x: 1\ny: 2",
+            "y: 2\nx: 1"
+        ]
+            
+        XCTAssert(validResults.contains(result))
     }
     
     func testUnicodeSurrogates() {
+        let result = Yaml.serialize(.Dictionary(["x": "Dog‼🐶", "y": "𝒂𝑡"]))
         
+        let validResults = [
+            "x: Dog‼🐶\ny: 𝒂𝑡",
+            "y: 𝒂𝑡\nx: Dog‼🐶"
+        ]
+        
+        XCTAssert(validResults.contains(result))
     }
 }
